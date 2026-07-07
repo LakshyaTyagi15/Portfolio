@@ -1,0 +1,113 @@
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+  align-items: start;
+}
+
+.about-intro {
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: var(--space-sm);
+}
+
+.about-body {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+}
+
+/* --- Achievements --- */
+.achievements-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.achievements-list li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.achievements-list li strong {
+  color: var(--text);
+}
+
+.ach-marker {
+  color: var(--accent);
+  margin-right: 0.4rem;
+  font-weight: 700;
+}
+
+/* --- Education --- */
+.education-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.timeline-entry {
+  padding-left: var(--space-sm);
+  border-left: 2px solid var(--accent);
+}
+
+.timeline-year {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  background: var(--accent-subtle);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.timeline-place {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.timeline-detail {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-top: 0.25rem;
+}
+
+/* --- Responsive --- */
+@media screen and (max-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}

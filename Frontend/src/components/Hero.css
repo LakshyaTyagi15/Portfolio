@@ -1,0 +1,125 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 72px var(--space-sm) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 750px;
+  z-index: 2;
+}
+
+.hero-greeting {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-xs);
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin-bottom: var(--space-sm);
+}
+
+.hero-role {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-bottom: var(--space-sm);
+  line-height: 1.6;
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+  line-height: 1.8;
+}
+
+.hero-tagline strong {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* --- Buttons --- */
+.btn-solid {
+  padding: 0.75rem 2rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.25);
+}
+
+.btn-solid:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
+}
+
+.btn-ghost {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  padding: 0.75rem 0.25rem;
+  border-bottom: 2px solid var(--border-strong);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-ghost:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* --- Floating dots --- */
+.hero-dots {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.12;
+  animation: float 8s ease-in-out infinite;
+}
+
+.dot-1 { width: 6px; height: 6px; top: 20%; left: 15%; animation-delay: 0s; }
+.dot-2 { width: 4px; height: 4px; top: 60%; left: 80%; animation-delay: 1.5s; }
+.dot-3 { width: 8px; height: 8px; top: 75%; left: 25%; animation-delay: 3s; }
+.dot-4 { width: 5px; height: 5px; top: 30%; left: 70%; animation-delay: 4.5s; }
+.dot-5 { width: 3px; height: 3px; top: 50%; left: 50%; animation-delay: 2s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); opacity: 0.12; }
+  50% { transform: translateY(-20px) scale(1.4); opacity: 0.25; }
+}
+
+/* --- Responsive --- */
+@media screen and (max-width: 768px) {
+  .hero-role {
+    font-size: 1.1rem;
+  }
+}
