@@ -157,7 +157,7 @@ const Contact = () => {
                                         Location
                                     </span>
                                     <span className="contact-link-value">
-                                        Kanpur, India
+                                        Bijnor, India
                                     </span>
                                 </div>
                             </div>
